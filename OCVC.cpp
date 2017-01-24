@@ -52,7 +52,7 @@ void OCVC::printBuffer(){
 
 
 /////////////////////////////////////////////////////////////////////////////
-//@I CLOCK FUNCTIONS 
+//@I CLOCK FUNCTIONS
 /////////////////////////////////////////////////////////////////////////////
 //@I Set the time by passing values from the array to the clock register
 void OCVC::setTime(){
@@ -192,7 +192,7 @@ int OCVC::checkTime(int place){
 }
 
 String OCVC::getTimeOffset(int offset){
-	int valType = 1;   //legacy code. Sets the time type to minutes
+	int valType = 0;   //legacy code. Sets the time type to seconds
 	getTime(); //load current timese
 	int times[3] = {timeArray[5],timeArray[4],timeArray[3]}; //load current time
 	for(int i = 0; i < 3; i++){
@@ -266,12 +266,3 @@ float OCVC::getClockTemp()
     rv = 0.25 * temp_lsb + nint;
     return rv;
 }
-
-
-
-
-
-
-
-
-
